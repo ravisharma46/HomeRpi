@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "487716925428",
+    "firebase_url": "https://homerpi-734c3.firebaseio.com",
+    "project_id": "homerpi-734c3",
+    "storage_bucket": "homerpi-734c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:487716925428:android:5fe5c034919f47b0",
+        "android_client_info": {
+          "package_name": "com.example.apple.homerpi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "487716925428-nekko74omphkj1qj3usbomaic7h0oibj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.apple.homerpi",
+            "certificate_hash": "f458384edb619f6493e56650c5508db439f4df18"
+          }
+        },
+        {
+          "client_id": "487716925428-igkk40lhkn09vnp5u8un3tt54l2qfbdc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkiVaLua48kKkd5nIgm49X8w3ipb6VMzA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "487716925428-igkk40lhkn09vnp5u8un3tt54l2qfbdc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
