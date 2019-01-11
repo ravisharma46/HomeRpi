@@ -79,8 +79,10 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundImage" value="$PROJECT_DIR$/../home-icon.png" />
-                                      <entry key="foregroundImage" value="$PROJECT_DIR$/../home-icon.png" />
+                                      <entry key="backgroundImage" value="$PROJECT_DIR$/../home_icon.png" />
+                                      <entry key="foregroundImage" value="$PROJECT_DIR$/../home_icon.png" />
+                                      <entry key="legacyIconShape" value="CIRCLE" />
+                                      <entry key="webIconShape" value="CIRCLE" />
                                     </map>
                                   </option>
                                 </PersistentState>

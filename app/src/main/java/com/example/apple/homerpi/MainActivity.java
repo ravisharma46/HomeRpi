@@ -28,6 +28,48 @@ public class MainActivity extends AppCompatActivity {
         editTextMobile= (EditText) findViewById(R.id.editTextMobile);
         button= (Button) findViewById(R.id.buttonContinue);
 
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String mobile=editTextMobile.getText().toString().trim();
+                if(mobile.isEmpty() || mobile.length()<10 || mobile.length()>10){
+                    editTextMobile.setError("Enter a valid mobile");
+                    editTextMobile.requestFocus();
+                    return;
+                }
+
+                Intent intent=new Intent(MainActivity.this,verifyPhoneActivity.class);
+                intent.putExtra("mobile",mobile);
+                startActivity(intent);
+            }
+        });
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+
+        check_internet_connection();
+
+        if(FirebaseAuth.getInstance().getCurrentUser()!=null){
+            Intent intent= new Intent(this,HomeRpi.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+            startActivity(intent);
+            Toast.makeText(MainActivity.this,"Already In",Toast.LENGTH_SHORT).show();
+        }
+
+
+
+
+    }
+
+
+    private void check_internet_connection(){
         android.net.ConnectivityManager cm = (ConnectivityManager) getSystemService(this.CONNECTIVITY_SERVICE);
 
         android.net.NetworkInfo activeNetworkInfo = cm.getActiveNetworkInfo();
@@ -56,33 +98,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                String mobile=editTextMobile.getText().toString().trim();
-                if(mobile.isEmpty() || mobile.length()<10 || mobile.length()>10){
-                    editTextMobile.setError("Enter a valid mobile");
-                    editTextMobile.requestFocus();
-                    return;
-                }
-
-                Intent intent=new Intent(MainActivity.this,verifyPhoneActivity.class);
-                intent.putExtra("mobile",mobile);
-                startActivity(intent);
-            }
-        });
-
     }
-    @Override
-    protected void onStart() {
-        super.onStart();
-        if(FirebaseAuth.getInstance().getCurrentUser()!=null){
-            Intent intent= new Intent(this,HomeRpi.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 
-            startActivity(intent);
-            Toast.makeText(MainActivity.this,"Already In",Toast.LENGTH_SHORT).show();
-        }
-    }
 }

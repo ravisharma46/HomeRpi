@@ -5,63 +5,118 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeRpi"
+    android:background="@color/colorHomepiBackground"
     tools:layout_editor_absoluteY="81dp">
 
     <Switch
         android:id="@+id/fan_button"
-        android:layout_width="368dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="106dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical|center"
+        android:paddingRight="13dp"
         android:showText="true"
         android:splitTrack="false"
-        android:text="fan"
         android:textAlignment="viewStart"
         android:textOff="OFF"
         android:textOn="ON"
         android:textSize="30sp"
+        android:thumb="@drawable/switch_on"
+        android:track="@drawable/switch_off"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:checked="false" />
 
     <Switch
         android:id="@+id/light_button"
-        android:layout_width="368dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="106dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
         android:checked="false"
+        android:paddingRight="13dp"
         android:showText="true"
         android:splitTrack="false"
-        android:text="light"
         android:textOff="OFF"
         android:textOn="ON"
         android:textSize="30sp"
+        android:thumb="@drawable/switch_on"
+        android:track="@drawable/switch_off"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fan_button" />
 
     <Switch
         android:id="@+id/wifi_button"
-        android:layout_width="368dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="106dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="20dp"
+        android:paddingRight="13dp"
         android:showText="true"
         android:splitTrack="false"
-        android:text="Wifi"
         android:textOn="ON"
         android:textSize="30sp"
+        android:thumb="@drawable/switch_on"
+        android:track="@drawable/switch_off"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/light_button" />
 
     <Button
         android:id="@+id/button_signOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="sign out"
+        android:layout_marginBottom="88dp"
+        android:background="@drawable/sign_out_button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/sign_out"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.795"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wifi_button" />
+        app:layout_constraintTop_toBottomOf="@+id/button_signOut" />
+
+    <ImageView
+        android:id="@+id/bulb_status"
+        android:layout_width="96dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="29dp"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fan_status"
+
+        app:srcCompat="@drawable/bulb_off" />
+
+    <ImageView
+        android:id="@+id/fan_status"
+        android:layout_width="96dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="38dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fan_off" />
+
+    <ImageView
+        android:id="@+id/wifi_status"
+        android:layout_width="96dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="240dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bulb_status"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/wifi_off" />
 
 </android.support.constraint.ConstraintLayout>

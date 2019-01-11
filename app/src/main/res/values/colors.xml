@@ -3,4 +3,5 @@
     <color name="colorPrimary">#1442da</color>
     <color name="colorPrimaryDark">#193dd4</color>
     <color name="colorAccent">#0f183e</color>
+    <color name="colorHomepiBackground">#e4e6ef</color>
 </resources>
