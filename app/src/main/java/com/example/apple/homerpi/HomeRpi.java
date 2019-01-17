@@ -105,6 +105,7 @@ public class HomeRpi extends AppCompatActivity {
                 if(isChecked){
                     sharedPreferences1.edit().putBoolean("isChecked", true).apply();
                     fan_switchRef.setValue("ON");
+
                     fan_switch.setImageResource(drawable.fan_on);
                     Toast.makeText(HomeRpi.this,"Fan "+fan.getTextOn().toString(),Toast.LENGTH_SHORT).show();
 

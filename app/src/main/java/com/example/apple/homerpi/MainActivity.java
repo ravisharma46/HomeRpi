@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -18,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText editTextMobile;
     private Button button;
+
+
+
 
 
     @Override
@@ -29,9 +33,11 @@ public class MainActivity extends AppCompatActivity {
         button= (Button) findViewById(R.id.buttonContinue);
 
 
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
 
                 String mobile=editTextMobile.getText().toString().trim();
                 if(mobile.isEmpty() || mobile.length()<10 || mobile.length()>10){
@@ -39,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
                     editTextMobile.requestFocus();
                     return;
                 }
+
+
+
+
+
+
 
                 Intent intent=new Intent(MainActivity.this,verifyPhoneActivity.class);
                 intent.putExtra("mobile",mobile);
