@@ -48,10 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-
                 Intent intent=new Intent(MainActivity.this,verifyPhoneActivity.class);
                 intent.putExtra("mobile",mobile);
                 startActivity(intent);
