@@ -4,9 +4,6 @@ which consist a rasberryPi and relay module and sockets of electric board is con
 
 Android app is connected to Google firebase and firebase is also connected to RaspberryPi.
 
-![Screenshot_20190421-111516](https://user-images.githubusercontent.com/35134157/56466016-28f31700-6428-11e9-8c75-c0015705b8bc.png)
-![Screenshot_20190421-111530](https://user-images.githubusercontent.com/35134157/56466017-298bad80-6428-11e9-9b37-de4df5b82c09.png)
-![Screenshot_20190421-111543](https://user-images.githubusercontent.com/35134157/56466018-298bad80-6428-11e9-8c83-47651ff7a33e.png)
-
+![Screenshot 2019-04-21 at 11 29 30 AM](https://user-images.githubusercontent.com/35134157/56466056-eed64500-6428-11e9-9a3b-70be7219b8f3.png)
 
 
